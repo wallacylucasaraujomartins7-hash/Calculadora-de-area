@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculadora de Área</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="container">
+    <h1>Calculadora de Área</h1>
+    <p>Escolha uma forma geométrica e informe suas medidas.</p>
+
+    <form id="areaForm">
+      <label for="forma">Forma geométrica:</label>
+
+      <select id="forma">
+        <option value="quadrado">Quadrado</option>
+        <option value="retangulo">Retângulo</option>
+        <option value="triangulo">Triângulo</option>
+        <option value="circulo">Círculo</option>
+        <option value="trapezio">Trapézio</option>
+      </select>
+
+      <div id="campos"></div>
+
+      <button type="submit">Calcular área</button>
+    </form>
+
+    <section id="resultado" aria-live="polite"></section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
