@@ -49,8 +49,9 @@ function mostrarCampos() {
       <label for="altura">Altura:</label>
       <input type="number" id="altura" min="0" step="any" required>
     `;
+  }
 
-    if (forma.value === "Losango") {
+    if (forma.value === "losango") {
       campos.innerHTML = `
         <label for="diametroMenor">Diâmetro menor:</label>
         <input type="number" id="diametroMenor" min="0" step="any" required>
@@ -58,7 +59,7 @@ function mostrarCampos() {
         <label for="diametroMaior">Diâmetro maior:</label>
         <input type="number" id="diametroMaior" min="0" step="any" required>
       `;
-  }
+    }
 }
 
 areaForm.addEventListener("submit", function (event) {
@@ -93,6 +94,12 @@ areaForm.addEventListener("submit", function (event) {
     const baseMaior = Number(document.querySelector("#baseMaior").value);
     const altura = Number(document.querySelector("#altura").value);
     area = ((baseMenor + baseMaior) * altura) / 2;
+  }
+
+  if (forma.value === "Losango") {
+    const diametroMenor = Number(document.querySelector("#diametroMenor").value);
+    const diametroMaior = Number(document.querySelector("#diametroMaior").value);
+    area = (diametroMenor * diametroMaior) / 2;
   }
 
   resultado.textContent = `Área: ${area.toFixed(2)} unidades²`;
