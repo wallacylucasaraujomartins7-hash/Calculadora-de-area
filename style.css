@@ -57,3 +57,13 @@ button:hover {
   background: #e0f2fe;
   font-weight: bold;
 }
+
+#formulaTexto {
+  margin-top: 20px;
+  padding: 15px;
+  border-radius: 6px;
+  background: #c2c2c4;
+  font-style: italic;
+  color: rgb(133, 128, 128);
+  font-size: 14px;
+}

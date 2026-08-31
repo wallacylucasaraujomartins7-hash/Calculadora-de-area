@@ -1,5 +1,6 @@
 const forma = document.querySelector("#forma");
 const campos = document.querySelector("#campos");
+const formulaTexto = document.querySelector("#formula");
 const areaForm = document.querySelector("#areaForm");
 const resultado = document.querySelector("#resultado");
 
@@ -51,15 +52,21 @@ function mostrarCampos() {
     `;
   }
 
-    if (forma.value === "losango") {
-      campos.innerHTML = `
-        <label for="diametroMenor">Diâmetro menor:</label>
-        <input type="number" id="diametroMenor" min="0" step="any" required>
+  if (forma.value === "losango") {
+    campos.innerHTML = `
+      <label for="diametroMenor">Diâmetro menor:</label>
+      <input type="number" id="diametroMenor" min="0" step="any" required>
 
-        <label for="diametroMaior">Diâmetro maior:</label>
-        <input type="number" id="diametroMaior" min="0" step="any" required>
-      `;
-    }
+      <label for="diametroMaior">Diâmetro maior:</label>
+      <input type="number" id="diametroMaior" min="0" step="any" required>
+     `;
+  }
+}
+
+function mostrarFormula() {
+  if (forma.value === "quadrado") {
+    formulaTexto.textContent = "Fórmula: Área = lado²";
+  }
 }
 
 areaForm.addEventListener("submit", function (event) {
@@ -96,7 +103,7 @@ areaForm.addEventListener("submit", function (event) {
     area = ((baseMenor + baseMaior) * altura) / 2;
   }
 
-  if (forma.value === "Losango") {
+  if (forma.value === "losango") {
     const diametroMenor = Number(document.querySelector("#diametroMenor").value);
     const diametroMaior = Number(document.querySelector("#diametroMaior").value);
     area = (diametroMenor * diametroMaior) / 2;
