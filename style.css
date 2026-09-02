@@ -57,3 +57,18 @@ button:hover {
   background: #e0f2fe;
   font-weight: bold;
 }
+
+#formula {
+  margin: 0;
+  padding: 15px;
+  border-radius: 6px;
+  background: #9e9d98;
+  font-weight: bold;
+  font-size: 16px;
+  border: none;
+}
+
+#formulaLabel {
+  margin-top: 20px;
+  font: italic small-caps 16px Arial, sans-serif;
+}
