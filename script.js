@@ -9,6 +9,9 @@ function mostrarCampos() {
     campos.innerHTML = `
       <label for="lado">Lado:</label>
       <input type="number" id="lado" min="0" step="any" required>
+
+      <label for="formula">Fórmula:</label>
+      <input type="text" id="formula" value="Área = lado²" readonly>
     `;
   }
 
@@ -19,6 +22,9 @@ function mostrarCampos() {
 
       <label for="altura">Altura:</label>
       <input type="number" id="altura" min="0" step="any" required>
+
+      <label for="formula">Fórmula:</label>
+      <input type="text" id="formula" value="Área = base × altura" readonly>
     `;
   }
 
@@ -29,6 +35,9 @@ function mostrarCampos() {
 
       <label for="altura">Altura:</label>
       <input type="number" id="altura" min="0" step="any" required>
+
+      <label for="formula">Fórmula:</label>
+      <input type="text" id="formula" value="Área = (base × altura) / 2" readonly>
     `;
   }
 
@@ -36,6 +45,9 @@ function mostrarCampos() {
     campos.innerHTML = `
       <label for="raio">Raio:</label>
       <input type="number" id="raio" min="0" step="any" required>
+
+      <label for="formula">Fórmula:</label>
+      <input type="text" id="formula" value="Área = π × raio²" readonly>
     `;
   }
 
@@ -49,6 +61,9 @@ function mostrarCampos() {
 
       <label for="altura">Altura:</label>
       <input type="number" id="altura" min="0" step="any" required>
+
+      <label for="formula">Fórmula:</label>
+      <input type="text" id="formula" value="Área = ((base menor + base maior) × altura) / 2" readonly>
     `;
   }
 
@@ -59,13 +74,10 @@ function mostrarCampos() {
 
       <label for="diametroMaior">Diâmetro maior:</label>
       <input type="number" id="diametroMaior" min="0" step="any" required>
-     `;
-  }
-}
 
-function mostrarFormula() {
-  if (forma.value === "quadrado") {
-    formulaTexto.textContent = "Fórmula: Área = lado²";
+      <label for="formula">Fórmula:</label>
+      <input type="text" id="formula" value="Área = (diâmetro menor × diâmetro maior) / 2" readonly>
+     `;
   }
 }
 
